@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Navtech.Migrations.DataContextCustomerMigrations
+namespace Navtech.Migrations
 {
     /// <inheritdoc />
     public partial class initial : Migration
@@ -19,7 +19,7 @@ namespace Navtech.Migrations.DataContextCustomerMigrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     firstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    mobileNumber = table.Column<int>(type: "int", nullable: false),
+                    mobileNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     timeCreated = table.Column<DateTime>(type: "datetime2", nullable: false)

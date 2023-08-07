@@ -8,10 +8,10 @@ using Navtech.Data;
 
 #nullable disable
 
-namespace Navtech.Migrations
+namespace Navtech.Migrations.DataContextProductMigrations
 {
-    [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DataContextProduct))]
+    partial class DataContextProductModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -22,30 +22,27 @@ namespace Navtech.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Navtech.Order", b =>
+            modelBuilder.Entity("Navtech.Product", b =>
                 {
-                    b.Property<int>("orderId")
+                    b.Property<int>("productId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("orderId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("productId"));
 
-                    b.Property<int>("items")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("createdTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("orderStatus")
+                    b.Property<string>("productName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("placedTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("updatedTime")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("orderId");
+                    b.HasKey("productId");
 
-                    b.ToTable("orders");
+                    b.ToTable("products");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,9 +2,9 @@
 
 namespace Navtech.Data
 {
-    public class DataContext:DbContext
+    public class DataContextOrder:DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
+        public DataContextOrder(DbContextOptions<DataContextOrder> options) : base(options) { }
          
         public DbSet<Order> orders { get; set; }
 

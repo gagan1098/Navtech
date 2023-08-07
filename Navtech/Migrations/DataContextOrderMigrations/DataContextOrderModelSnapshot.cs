@@ -3,20 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Navtech.Data;
 
 #nullable disable
 
-namespace Navtech.Migrations
+namespace Navtech.Migrations.DataContextOrderMigrations
 {
-    [DbContext(typeof(DataContext))]
-    [Migration("20230807102748_initial")]
-    partial class initial
+    [DbContext(typeof(DataContextOrder))]
+    partial class DataContextOrderModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

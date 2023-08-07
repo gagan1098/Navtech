@@ -7,7 +7,7 @@
 
         public string lastName { get; set; }
 
-        public int mobileNumber { get; set; }
+        public string mobileNumber { get; set; }
 
         public string address { get; set; }
 

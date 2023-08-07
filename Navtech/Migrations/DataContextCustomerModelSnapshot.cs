@@ -3,20 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Navtech.Data;
 
 #nullable disable
 
-namespace Navtech.Migrations.DataContextCustomerMigrations
+namespace Navtech.Migrations
 {
     [DbContext(typeof(DataContextCustomer))]
-    [Migration("20230807102802_initial")]
-    partial class initial
+    partial class DataContextCustomerModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,8 +46,9 @@ namespace Navtech.Migrations.DataContextCustomerMigrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("mobileNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("mobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("timeCreated")
                         .HasColumnType("datetime2");

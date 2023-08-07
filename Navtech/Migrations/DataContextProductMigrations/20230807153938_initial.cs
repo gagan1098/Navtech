@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Navtech.Migrations
+namespace Navtech.Migrations.DataContextProductMigrations
 {
     /// <inheritdoc />
     public partial class initial : Migration
@@ -12,19 +12,18 @@ namespace Navtech.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "orders",
+                name: "products",
                 columns: table => new
                 {
-                    orderId = table.Column<int>(type: "int", nullable: false)
+                    productId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    orderStatus = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    placedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    productName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     updatedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    items = table.Column<int>(type: "int", nullable: false)
+                    createdTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_orders", x => x.orderId);
+                    table.PrimaryKey("PK_products", x => x.productId);
                 });
         }
 
@@ -32,7 +31,7 @@ namespace Navtech.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "orders");
+                name: "products");
         }
     }
 }
