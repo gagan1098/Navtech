@@ -9,17 +9,13 @@ namespace Navtech.Controllers
     {
        
         private readonly DataContextOrder _context;
-        
-        
-
         public OrderController(DataContextOrder context)
         {
             _context = context;
            
         }
 
-        [HttpGet]
-        
+        [HttpGet]       
         public async Task<ActionResult<List<Order>>> getOrders(int pageIndex, int pageSize)
         {
             pageIndex--;
@@ -33,20 +29,9 @@ namespace Navtech.Controllers
             
 
             return Ok(query);
-
-
-
-
-
         }
 
-
-
-
-
-
         [HttpPost]
-        
         public async Task<ActionResult<List<Order>>> addOrder(Order od)
         {
             
@@ -55,10 +40,6 @@ namespace Navtech.Controllers
             if(isvalidorderstatus==false) {
                 return BadRequest("Invalid orderStatus provided");
             }
-
-
-
-
 
             try{
                 _context.orders.Add(od);
@@ -72,9 +53,6 @@ namespace Navtech.Controllers
             
             return Ok("Order has been created");  
             
-           
-
-
         }
         
     }

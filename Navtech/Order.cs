@@ -1,8 +1,13 @@
-﻿namespace Navtech
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Navtech
 {
     public class Order
     {
-        public int orderId { get; set; }
+
+
+
+        [System.Text.Json.Serialization.JsonIgnore] public int orderId { get; set; }
 
         public string orderStatus { get; set; }
 

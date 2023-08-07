@@ -1,8 +1,10 @@
-﻿namespace Navtech
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Navtech
 {
     public class Customer
     {
-        public int customerId { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore] public int customerId { get; set; }
         public string firstName { get; set; }
 
         public string lastName { get; set; }
