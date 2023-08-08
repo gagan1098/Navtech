@@ -16,8 +16,9 @@ There are 3 APIs:
 - Query params
 	- pageSize: int
 	- pageIndex: int
+
 Status code
-200: OK
+	- 200: OK
 
 ### POST API /api/Order: To create a new order
 
@@ -27,8 +28,8 @@ Status code
 ```
 Status code
 
-200: OK
-400: Bad Request
+	- 200: OK
+	- 400: Bad Request
 	
 ### POST API /api/Customer: To create a new customer
 
@@ -38,19 +39,20 @@ Payload
 ```
 Status code
 
-200: OK
-400: Bad Request
+	- 200: OK
+	- 400: Bad Request
 
 ## Approach
 
-Created 2 tables namely Order and Customer with corresponding properties
-Created controllers for each of the models constructed before
-Created DataContexts for each of the models constructed before
-Introduced validations on request parameters
-Handled various exceptions, e.g. when an order is created with existing orderId
-Tried to add UTs to ensure 100% code coverage
+- Created 2 tables namely Order and Customer with corresponding properties
+- Created controllers for each of the models constructed before
+- Created DataContexts for each of the models constructed before
+- Introduced validations on request parameters
+- Handled various exceptions, e.g. when an order is created with existing orderId
+- Tried to add UTs to ensure 100% code coverage
 
 ## Difficulties
 
 - I found it bit challenging to figure out how to establish MySQL connection from Visual Studio to MS Server. After some debugging I discovered that parameter `TrustServerCertificate=True` was missing from connection string. After using this required parameter I was able to connect ORM with MS Server.
 - Faced difficulty figuring out how to display product details in GET API `/api/Order` along with order details, due to unfamiliarity with JOIN statements in Entity Framework.
+- Since I haven't written UTs before in ASP.NET, it was a bit tedious task to figure out how to write them. After some struggle, I was able to write UTs for success scenarios for OrderController and CustomerController.
