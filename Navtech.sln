@@ -5,7 +5,18 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Navtech", "Navtech\Navtech.csproj", "{75EA93F1-1A54-4DF3-A205-C0090FD59051}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{4A364FFB-483C-42EC-AA74-BECABFE11A49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{4A364FFB-483C-42EC-AA74-BECABFE11A49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{D1A4D6BF-9FBF-4B3B-A1C5-D68AC5805F66}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.37.23.72.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.37.23.72.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.37.47.17.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.37.47.17.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.38.14.35.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.38.14.35.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.25.02.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.25.02.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.31.82.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.31.82.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.59.71.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.39.59.71.png
+		..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.40.22.63.png = ..\..\..\Videos\Desktop\Demo\Desktop Screenshot 2023.08.08 - 15.40.22.63.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
