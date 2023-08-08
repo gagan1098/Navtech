@@ -7,8 +7,5 @@
         Confirmed,
         Cancelled,
         Refunded
-
     }
-
-    
 }

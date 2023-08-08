@@ -17,7 +17,5 @@ namespace Navtech
 
         public DateTime timeCreated { get; set; }
  
-
-
     }
 }

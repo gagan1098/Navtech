@@ -4,9 +4,6 @@ namespace Navtech
 {
     public class Order
     {
-
-
-
         [System.Text.Json.Serialization.JsonIgnore] public int orderId { get; set; }
 
         public string orderStatus { get; set; }
@@ -15,10 +12,6 @@ namespace Navtech
 
         public DateTime updatedTime { get; set; }
 
-        public int items { get; set; }
-
-        
-
-        
+        public int items { get; set; }        
     }
 }
